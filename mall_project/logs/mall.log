@@ -1,0 +1,1494 @@
+INFO 2021-01-26 07:22:47,070 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 07:22:47,548 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:23:01,871 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 07:23:02,154 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:34:03,836 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 07:34:04,181 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:43:07,630 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:43:21,917 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:43:28,561 basehttp 157 "GET /image_codes/1fd34274-9b95-4e5f-a942-4ed9b2ae30d2/ HTTP/1.1" 200 3426
+ERROR 2021-01-26 07:43:36,244 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:43:36,251 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+ERROR 2021-01-26 07:44:14,401 views 60 'Redis' object has no attribute 'delect'
+ERROR 2021-01-26 07:44:24,131 log 230 Internal Server Error: /sms_codes/18574178303/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py", line 66, in get
+    if image_code_client.lower() != image_code_server():
+TypeError: 'str' object is not callable
+ERROR 2021-01-26 07:44:24,136 basehttp 157 "GET /sms_codes/18574178303/?image_code=slgq&image_code_id=1fd34274-9b95-4e5f-a942-4ed9b2ae30d2 HTTP/1.1" 500 77147
+INFO 2021-01-26 07:44:47,746 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 07:44:48,574 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:46:11,553 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:46:18,460 basehttp 157 "GET /image_codes/ccd578f9-be02-47b7-88c1-47fe28bc05a8/ HTTP/1.1" 200 3216
+ERROR 2021-01-26 07:46:24,893 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:46:24,896 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+ERROR 2021-01-26 07:46:41,670 views 60 'Redis' object has no attribute 'delect'
+INFO 2021-01-26 07:46:46,952 views 72 347475
+INFO 2021-01-26 07:46:53,182 basehttp 157 "GET /sms_codes/18574178303/?image_code=hvrg&image_code_id=ccd578f9-be02-47b7-88c1-47fe28bc05a8 HTTP/1.1" 200 61
+INFO 2021-01-26 07:47:06,068 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:47:49,131 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:47:53,990 basehttp 157 "GET /image_codes/aca684fe-ca28-4b8d-be7b-4b55d97dad77/ HTTP/1.1" 200 3027
+ERROR 2021-01-26 07:48:03,222 views 60 'Redis' object has no attribute 'delect'
+INFO 2021-01-26 07:48:03,222 views 72 066208
+INFO 2021-01-26 07:48:03,223 basehttp 157 "GET /sms_codes/18574178303/?image_code=zyds&image_code_id=aca684fe-ca28-4b8d-be7b-4b55d97dad77 HTTP/1.1" 200 61
+ERROR 2021-01-26 07:48:03,260 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:48:03,262 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 117826
+INFO 2021-01-26 07:52:48,746 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 07:52:49,229 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:53:15,019 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:53:17,266 basehttp 157 "GET /image_codes/4b330f27-79c1-477f-80d2-3dfd8db93505/ HTTP/1.1" 200 3463
+INFO 2021-01-26 07:53:26,774 basehttp 157 "GET /usernames/dapeng123456/count/ HTTP/1.1" 200 39
+ERROR 2021-01-26 07:53:26,908 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:53:26,910 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+ERROR 2021-01-26 07:53:29,308 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:53:29,309 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+ERROR 2021-01-26 07:54:15,796 views 60 'Redis' object has no attribute 'delect'
+INFO 2021-01-26 07:55:20,022 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:55:25,979 basehttp 157 "GET /image_codes/78300134-a086-4e41-bf96-78797296c653/ HTTP/1.1" 200 3045
+INFO 2021-01-26 07:55:51,215 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:55:54,193 basehttp 157 "GET /image_codes/7f801295-5396-44f3-8fd2-ede501026d36/ HTTP/1.1" 200 3601
+INFO 2021-01-26 07:56:28,339 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:56:32,411 basehttp 157 "GET /image_codes/2c683491-eecb-4251-babc-a2a2d49ed035/ HTTP/1.1" 200 3352
+INFO 2021-01-26 07:56:33,791 basehttp 157 "GET /image_codes/a5aa8810-7e6e-4d62-ae5c-84b978fc8984/ HTTP/1.1" 200 3325
+INFO 2021-01-26 07:59:07,297 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 07:59:14,934 basehttp 157 "GET /image_codes/f95faf1b-5b85-411b-8dc1-af19f4170711/ HTTP/1.1" 200 3085
+INFO 2021-01-26 07:59:21,421 basehttp 157 "GET /usernames/dapeng123456/count/ HTTP/1.1" 200 39
+ERROR 2021-01-26 07:59:23,581 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:59:23,583 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+ERROR 2021-01-26 07:59:28,926 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 25, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-26 07:59:28,927 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119714
+INFO 2021-01-26 08:00:23,173 basehttp 157 "GET /sms_codes/18574178303/?image_code=vumb&image_code_id=f95faf1b-5b85-411b-8dc1-af19f4170711 HTTP/1.1" 200 61
+INFO 2021-01-26 08:00:43,004 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:00:46,962 basehttp 157 "GET /image_codes/13dc381b-0b34-4b1a-8d85-0427a16fb2a1/ HTTP/1.1" 200 3207
+INFO 2021-01-26 08:13:31,702 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:13:32,065 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:18:41,888 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:18:42,281 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:22:09,658 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:22:10,008 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:25:41,577 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:25:41,897 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:40:37,485 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:40:37,822 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:42:04,928 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:42:05,237 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:47:08,987 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:47:09,315 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 08:51:34,497 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 08:51:34,863 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-26 09:20:36,259 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-26 09:20:36,781 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 03:11:27,398 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-27 03:11:27,868 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:28:16,783 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py changed, reloading.
+INFO 2021-01-27 05:28:17,089 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:29:05,766 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-01-27 05:29:06,050 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:29:25,389 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-01-27 05:29:25,689 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:33:20,523 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-01-27 05:33:20,824 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:36:52,459 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 05:36:52,766 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:45:44,328 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 05:45:44,635 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:50:04,761 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 05:50:05,085 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:51:14,014 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 05:51:14,301 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 05:58:27,359 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 05:58:27,659 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 06:08:40,964 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 06:08:41,292 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 06:13:57,958 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 06:13:58,266 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 06:40:29,051 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 06:40:29,363 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:08:48,725 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:09:31,150 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:11:22,818 basehttp 157 "GET /image_codes/c9efc2f2-7eaa-4d20-a2b3-55cee634b30d/ HTTP/1.1" 200 2990
+INFO 2021-01-27 07:11:47,251 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:11:56,068 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+ERROR 2021-01-27 07:12:10,220 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:12:10,227 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+INFO 2021-01-27 07:12:19,587 basehttp 157 "GET /sms_codes/18574178303/?image_code=aonv&image_code_id=c9efc2f2-7eaa-4d20-a2b3-55cee634b30d HTTP/1.1" 200 61
+ERROR 2021-01-27 07:12:19,671 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:12:19,672 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+INFO 2021-01-27 07:12:48,292 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 07:12:48,292 basehttp 157 "OPTIONS /register/ HTTP/1.1" 200 0
+ERROR 2021-01-27 07:12:48,382 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:12:48,384 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+WARNING 2021-01-27 07:12:48,392 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 07:12:48,393 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 07:13:47,791 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:13:51,399 basehttp 157 "GET /image_codes/3cd31ae4-ccab-4ba6-90a6-2bb68630c8bd/ HTTP/1.1" 200 3080
+INFO 2021-01-27 07:13:55,479 basehttp 157 "GET /image_codes/b0bf2196-e504-4703-b2d7-7be02c09378a/ HTTP/1.1" 200 3080
+ERROR 2021-01-27 07:14:06,995 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:14:06,997 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+INFO 2021-01-27 07:14:40,714 basehttp 157 "GET /sms_codes/18574178303/?image_code=rwoc&image_code_id=b0bf2196-e504-4703-b2d7-7be02c09378a HTTP/1.1" 200 61
+INFO 2021-01-27 07:17:06,889 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:17:10,255 basehttp 157 "GET /image_codes/e61aef44-ffb6-4972-912b-83135966f9d8/ HTTP/1.1" 200 3227
+INFO 2021-01-27 07:17:14,858 basehttp 157 "GET /image_codes/bf2fe01e-4db5-4be0-9bed-404e6a8e90b7/ HTTP/1.1" 200 3225
+INFO 2021-01-27 07:17:21,532 basehttp 157 "GET /sms_codes/18574178303/?image_code=vbi9&image_code_id=bf2fe01e-4db5-4be0-9bed-404e6a8e90b7 HTTP/1.1" 200 61
+ERROR 2021-01-27 07:17:21,570 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:17:21,572 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 117946
+INFO 2021-01-27 07:20:40,960 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 07:20:41,263 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-01-27 07:20:48,776 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:20:48,777 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 117946
+INFO 2021-01-27 07:21:07,453 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-01-27 07:21:26,933 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:21:26,944 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+INFO 2021-01-27 07:36:06,979 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:36:10,781 basehttp 157 "GET /image_codes/14dba6d7-61c7-42a4-b9e2-02e590ffef4e/ HTTP/1.1" 200 3369
+INFO 2021-01-27 07:36:17,426 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 07:36:34,080 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 07:36:57,505 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 07:37:23,365 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-01-27 07:37:31,466 log 230 Internal Server Error: /mobiles/18574178303/count/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 30, in get
+    count = User.objects.filter(mobile=mobile).count()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 942, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 962, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/query.py", line 969, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1358, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1380, in _add_q
+    split_subq=split_subq, check_filterable=check_filterable,
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1258, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1084, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/db/models/sql/query.py", line 1482, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'mobile' into field. Choices are: date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, password, user_permissions, username
+ERROR 2021-01-27 07:37:31,478 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 500 119834
+INFO 2021-01-27 07:46:13,334 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/models.py changed, reloading.
+INFO 2021-01-27 07:46:14,053 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:47:54,987 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-01-27 08:48:18,091 log 230 Not Found: /carts/simple/
+WARNING 2021-01-27 08:48:18,092 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 2908
+INFO 2021-01-27 08:48:24,279 basehttp 157 "GET /image_codes/5cb8084d-a688-49a5-b8d6-39e6dac60283/ HTTP/1.1" 200 3100
+INFO 2021-01-27 08:48:30,682 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:48:43,537 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:49:19,728 basehttp 157 "GET /image_codes/5ca0a689-ee65-4e50-9c7b-b9617b1f3cc6/ HTTP/1.1" 200 3265
+INFO 2021-01-27 08:49:38,581 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:49:46,661 basehttp 157 "GET /image_codes/0c54d8ea-d174-4797-a541-47054bc18ba8/ HTTP/1.1" 200 3185
+INFO 2021-01-27 08:49:50,407 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:50:10,434 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:50:16,356 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:50:16,360 basehttp 157 "GET /sms_codes/18574178303/?image_code=h8sk&image_code_id=0c54d8ea-d174-4797-a541-47054bc18ba8 HTTP/1.1" 200 61
+INFO 2021-01-27 08:50:32,642 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:50:32,647 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+WARNING 2021-01-27 08:50:32,657 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 08:50:32,657 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 08:51:23,279 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:52:15,402 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:52:19,230 basehttp 157 "GET /image_codes/86337cfa-dff7-4e2e-b5ea-f166317218ec/ HTTP/1.1" 200 3336
+INFO 2021-01-27 08:52:27,352 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:52:38,904 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:52:43,680 basehttp 157 "GET /image_codes/8e32242a-e289-45af-a249-8a7faf59ec71/ HTTP/1.1" 200 3061
+INFO 2021-01-27 08:52:49,936 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:52:49,940 basehttp 157 "GET /sms_codes/18574178303/?image_code=eosj&image_code_id=8e32242a-e289-45af-a249-8a7faf59ec71 HTTP/1.1" 200 61
+INFO 2021-01-27 08:53:08,226 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:53:08,231 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+WARNING 2021-01-27 08:53:08,243 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 08:53:08,244 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 08:53:28,061 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:53:28,066 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+WARNING 2021-01-27 08:53:28,070 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 08:53:28,070 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 08:53:29,186 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:53:29,191 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+WARNING 2021-01-27 08:53:29,195 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 08:53:29,196 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 08:54:05,784 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:54:08,297 basehttp 157 "GET /image_codes/28fa51fd-07f6-49ca-ada4-258560d82bca/ HTTP/1.1" 200 3307
+INFO 2021-01-27 08:54:13,063 basehttp 157 "GET /image_codes/fbd3cdb6-c52f-4172-95f7-327b93da9020/ HTTP/1.1" 200 3243
+INFO 2021-01-27 08:54:24,898 basehttp 157 "GET /sms_codes/18574178303/?image_code=v63x&image_code_id=fbd3cdb6-c52f-4172-95f7-327b93da9020 HTTP/1.1" 200 61
+INFO 2021-01-27 08:54:24,900 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:54:39,477 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:54:39,481 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+WARNING 2021-01-27 08:54:39,494 log 230 Forbidden (CSRF cookie not set.): /register/
+WARNING 2021-01-27 08:54:39,494 basehttp 157 "POST /register/ HTTP/1.1" 403 2864
+INFO 2021-01-27 08:58:33,408 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/settings/dev.py changed, reloading.
+INFO 2021-01-27 08:58:34,140 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:58:37,451 basehttp 157 "GET /image_codes/248c545b-d357-4d75-901e-8706572ed8f3/ HTTP/1.1" 200 3583
+INFO 2021-01-27 08:59:13,462 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 08:59:17,458 basehttp 157 "GET /image_codes/90bc796d-3a0d-4e6d-a7ef-bb1dbc717248/ HTTP/1.1" 200 2845
+INFO 2021-01-27 08:59:21,089 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 08:59:34,206 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:00:04,902 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:00:05,778 basehttp 157 "GET /image_codes/117be920-9df1-40d3-bca6-004f59e223d7/ HTTP/1.1" 200 3100
+INFO 2021-01-27 09:00:11,241 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:00:11,244 basehttp 157 "GET /sms_codes/18574178303/?image_code=jlpc&image_code_id=117be920-9df1-40d3-bca6-004f59e223d7 HTTP/1.1" 200 61
+INFO 2021-01-27 09:00:23,133 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:00:23,138 basehttp 157 "GET /mobiles/18574178303/count/ HTTP/1.1" 200 39
+ERROR 2021-01-27 09:02:32,591 log 230 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view users.views.RegisterView didn't return an HttpResponse object. It returned None instead.
+ERROR 2021-01-27 09:02:32,597 basehttp 157 "POST /register/ HTTP/1.1" 500 66076
+INFO 2021-01-27 09:08:06,398 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:08:14,339 basehttp 157 "GET /image_codes/5bff9a30-cb98-4803-a1da-87c405797152/ HTTP/1.1" 200 3133
+INFO 2021-01-27 09:08:23,460 basehttp 157 "GET /usernames/xiaozhibo/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:08:50,960 basehttp 157 "GET /mobiles/17717506682/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:08:56,642 basehttp 157 "GET /mobiles/17717506682/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:08:56,647 basehttp 157 "GET /sms_codes/17717506682/?image_code=oycb&image_code_id=5bff9a30-cb98-4803-a1da-87c405797152 HTTP/1.1" 200 61
+INFO 2021-01-27 09:09:10,324 basehttp 157 "GET /usernames/xiaozhibo/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:09:10,329 basehttp 157 "GET /mobiles/17717506682/count/ HTTP/1.1" 200 39
+ERROR 2021-01-27 09:09:10,467 log 230 Internal Server Error: /register/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view users.views.RegisterView didn't return an HttpResponse object. It returned None instead.
+ERROR 2021-01-27 09:09:10,467 basehttp 157 "POST /register/ HTTP/1.1" 500 64188
+INFO 2021-01-27 09:11:17,138 basehttp 157 "GET /image_codes/88009151-fa9c-4c0b-b612-a8af60e05daf/ HTTP/1.1" 200 3030
+INFO 2021-01-27 09:11:21,640 basehttp 157 "GET /usernames/xiaozhibo/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:11:29,215 basehttp 157 "GET /mobiles/17717506682/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:17:35,181 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 09:17:35,508 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:17:47,243 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:17:59,810 basehttp 157 "GET /usernames/dapeng/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:18:06,549 basehttp 157 "GET /usernames/dapengtest/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:18:23,513 basehttp 157 "GET /mobiles/18574178301/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:18:25,881 basehttp 157 "GET /image_codes/7ba917f0-b533-42e5-bb5e-de4dad853a9a/ HTTP/1.1" 200 3261
+INFO 2021-01-27 09:18:36,350 basehttp 157 "GET /mobiles/18574178301/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:18:36,353 basehttp 157 "GET /sms_codes/18574178301/?image_code=quky&image_code_id=7ba917f0-b533-42e5-bb5e-de4dad853a9a HTTP/1.1" 200 81
+INFO 2021-01-27 09:19:08,834 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 09:19:09,598 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:19:10,821 basehttp 157 "GET /image_codes/ef7c73cc-311a-488d-a924-3dce7a9e1fa1/ HTTP/1.1" 200 3317
+INFO 2021-01-27 09:19:34,992 basehttp 157 "GET /image_codes/b84e9d17-6312-4916-b66f-3f4c7569e1de/ HTTP/1.1" 200 3421
+INFO 2021-01-27 09:19:42,694 basehttp 157 "GET /mobiles/18574178301/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:19:42,694 basehttp 157 "GET /sms_codes/18574178301/?image_code=fgpz&image_code_id=b84e9d17-6312-4916-b66f-3f4c7569e1de HTTP/1.1" 200 61
+INFO 2021-01-27 09:19:58,850 basehttp 157 "GET /usernames/dapengtest/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:19:58,855 basehttp 157 "GET /mobiles/18574178301/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:19:58,857 basehttp 157 "OPTIONS /register/ HTTP/1.1" 200 0
+INFO 2021-01-27 09:20:26,489 basehttp 157 "POST /register/ HTTP/1.1" 200 27
+WARNING 2021-01-27 09:20:26,686 log 230 Not Found: /carts/simple/
+WARNING 2021-01-27 09:20:26,686 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 2908
+INFO 2021-01-27 09:20:43,212 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:20:49,077 basehttp 157 "GET /image_codes/53c5d313-c148-401e-bd8c-76e42baa6ad1/ HTTP/1.1" 200 3403
+INFO 2021-01-27 09:20:52,213 basehttp 157 "GET /image_codes/f22c4f45-0530-4549-84a7-a8dba721b88f/ HTTP/1.1" 200 2959
+INFO 2021-01-27 09:21:02,078 basehttp 157 "GET /usernames/xiaozhibotest/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:21:15,936 basehttp 157 "GET /mobiles/17717506681/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:21:21,710 basehttp 157 "GET /mobiles/17717506681/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:21:21,713 basehttp 157 "GET /sms_codes/17717506681/?image_code=f38g&image_code_id=f22c4f45-0530-4549-84a7-a8dba721b88f HTTP/1.1" 200 61
+INFO 2021-01-27 09:21:33,140 basehttp 157 "GET /usernames/xiaozhibotest/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:21:33,144 basehttp 157 "GET /mobiles/17717506681/count/ HTTP/1.1" 200 39
+INFO 2021-01-27 09:21:33,255 basehttp 157 "POST /register/ HTTP/1.1" 200 27
+WARNING 2021-01-27 09:21:33,427 log 230 Not Found: /carts/simple/
+WARNING 2021-01-27 09:21:33,427 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 2908
+WARNING 2021-01-27 09:21:56,940 log 230 Not Found: /carts/simple/
+WARNING 2021-01-27 09:21:56,940 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 2908
+INFO 2021-01-27 09:23:10,320 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 09:23:10,663 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:23:13,847 basehttp 157 "GET /image_codes/13df5f42-30c5-4e26-94d8-9b7cb5e175d2/ HTTP/1.1" 200 3584
+INFO 2021-01-27 09:26:59,936 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 09:27:00,264 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-27 09:27:38,893 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-27 09:27:39,189 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-28 07:46:38,692 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-28 07:46:39,264 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-28 08:10:39,587 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-01-28 08:10:40,064 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-01-29 01:01:09,133 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-01-29 01:01:09,605 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 01:12:42,154 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 01:17:02,922 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/urls.py changed, reloading.
+INFO 2021-03-09 01:17:03,402 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-09 01:17:48,212 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 01:17:48,212 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 2908
+ERROR 2021-03-09 01:17:52,038 log 230 Internal Server Error: /image_codes/8faf5e25-50a1-41aa-8e2e-d9a96b6e018f/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py", line 27, in get
+    redis_conn.setex('img_%s' % uuid, 300, text)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2021-03-09 01:17:52,040 basehttp 157 "GET /image_codes/8faf5e25-50a1-41aa-8e2e-d9a96b6e018f/ HTTP/1.1" 500 111155
+INFO 2021-03-09 01:18:03,275 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-09 01:18:08,077 log 230 Internal Server Error: /image_codes/c275d675-642d-4f41-8ba6-77d73154cb2c/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 559, in connect
+    sock = self._connect()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 615, in _connect
+    raise err
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 603, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/verifications/views.py", line 27, in get
+    redis_conn.setex('img_%s' % uuid, 300, text)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/client.py", line 1822, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/client.py", line 898, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 1192, in get_connection
+    connection.connect()
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/redis/connection.py", line 563, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 61 connecting to 127.0.0.1:6379. Connection refused.
+ERROR 2021-03-09 01:18:08,079 basehttp 157 "GET /image_codes/c275d675-642d-4f41-8ba6-77d73154cb2c/ HTTP/1.1" 500 111208
+INFO 2021-03-09 01:20:34,339 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 01:20:36,636 basehttp 157 "GET /image_codes/3ea7b6d8-dfe8-4a6c-989b-765f824c2ab8/ HTTP/1.1" 200 3539
+INFO 2021-03-09 01:31:17,691 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 01:31:18,156 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 01:32:29,331 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 01:32:29,990 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 01:33:43,171 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 01:33:43,650 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:02:30,302 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:02:30,911 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:11:52,175 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:11:52,636 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:20:56,932 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:20:57,306 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:27:41,080 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-09 02:27:41,628 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:31:15,678 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:31:16,027 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:34:47,830 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:34:48,460 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:47:44,253 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:47:44,796 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 02:56:52,027 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 02:56:52,520 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 03:06:38,455 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 03:07:03,639 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-09 03:07:03,755 basehttp 157 "POST /login/ HTTP/1.1" 200 3
+WARNING 2021-03-09 03:07:03,965 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 03:07:03,965 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3063
+INFO 2021-03-09 05:43:31,052 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 05:44:00,563 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 05:44:00,768 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 05:44:00,768 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3063
+INFO 2021-03-09 05:52:14,698 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 05:52:15,250 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 05:52:22,191 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 05:52:46,986 basehttp 157 "POST /login/ HTTP/1.1" 200 3
+WARNING 2021-03-09 05:52:47,174 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 05:52:47,174 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3063
+INFO 2021-03-09 05:56:37,327 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 05:57:59,330 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 05:58:16,801 basehttp 157 "POST /login/ HTTP/1.1" 200 3
+WARNING 2021-03-09 05:58:16,976 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 05:58:16,976 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3063
+INFO 2021-03-09 06:23:02,522 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 06:23:03,212 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 06:39:29,058 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-09 06:39:29,707 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 06:43:56,590 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 06:43:56,914 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-09 07:01:08,449 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:01:08,450 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3219
+INFO 2021-03-09 07:01:20,325 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:06:08,331 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-09 07:06:08,684 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:22:02,137 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 07:22:02,689 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:23:19,157 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:23:21,422 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-09 07:23:21,545 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 07:23:21,753 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:23:21,753 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3219
+INFO 2021-03-09 07:28:02,797 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:28:30,394 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-09 07:28:30,503 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 07:28:30,681 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:28:30,682 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+INFO 2021-03-09 07:34:42,394 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 07:36:11,030 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 07:36:11,499 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:36:11,501 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+INFO 2021-03-09 07:52:54,212 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-09 07:52:54,801 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:52:54,801 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+WARNING 2021-03-09 07:53:28,321 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 07:53:28,321 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+WARNING 2021-03-09 08:02:18,158 log 230 Not Found: /
+WARNING 2021-03-09 08:02:18,159 basehttp 157 "GET / HTTP/1.1" 404 3156
+WARNING 2021-03-09 08:02:18,252 log 230 Not Found: /favicon.ico
+WARNING 2021-03-09 08:02:18,252 basehttp 157 "GET /favicon.ico HTTP/1.1" 404 3207
+WARNING 2021-03-09 08:02:59,637 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 08:02:59,638 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+INFO 2021-03-09 08:03:24,245 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 08:03:24,438 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 08:03:24,438 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+INFO 2021-03-09 08:23:26,724 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-09 08:23:27,221 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 08:24:14,903 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-09 08:24:36,990 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-09 08:24:37,175 log 230 Not Found: /carts/simple/
+WARNING 2021-03-09 08:24:37,176 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3213
+WARNING 2021-03-09 08:24:38,745 log 230 Not Found: /info/
+WARNING 2021-03-09 08:24:38,745 basehttp 157 "GET /info/ HTTP/1.1" 404 3189
+WARNING 2021-03-09 08:24:38,746 log 230 Not Found: /browse_histories/
+WARNING 2021-03-09 08:24:38,747 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3225
+INFO 2021-03-10 01:40:52,172 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 01:41:43,051 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-10 01:41:43,580 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 01:47:41,150 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 01:48:45,057 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 01:48:45,057 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 02:59:11,261 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-10 02:59:11,796 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 05:49:56,757 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 06:08:30,478 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 06:08:41,573 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-10 06:08:41,683 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 06:08:41,859 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 06:08:41,860 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 06:08:44,554 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 06:08:44,554 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 06:08:44,556 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 06:45:05,327 basehttp 157 "GET /image_codes/79a13b4d-1833-4b01-8d06-c5ef96792b95/ HTTP/1.1" 200 3242
+INFO 2021-03-10 06:49:21,841 basehttp 157 "GET /image_codes/32f6bda2-d1c7-49a6-856b-213bba447479/ HTTP/1.1" 200 3423
+INFO 2021-03-10 06:49:40,012 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 06:49:40,161 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 06:49:40,161 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 06:49:43,811 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 06:49:43,812 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 06:49:50,005 log 230 Not Found: /carts/
+WARNING 2021-03-10 06:49:50,005 basehttp 157 "GET /carts/ HTTP/1.1" 404 3346
+WARNING 2021-03-10 06:49:51,291 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 06:49:51,291 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 06:49:51,293 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+WARNING 2021-03-10 06:49:58,973 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 06:49:58,974 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 06:49:58,976 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 06:55:39,208 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 06:55:39,361 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 06:55:39,361 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 06:59:14,707 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 06:59:20,122 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-10 06:59:20,240 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 06:59:20,408 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 06:59:20,408 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3373
+INFO 2021-03-10 07:00:16,172 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 07:00:33,892 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 07:00:34,039 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:00:34,039 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:03:31,401 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 07:03:31,402 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 07:03:31,404 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 07:04:29,400 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 07:08:34,613 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 07:09:22,215 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 07:13:11,508 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-10 07:13:12,239 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-10 07:13:15,314 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 07:14:19,166 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 07:14:19,168 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 07:14:19,173 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 07:14:40,120 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 07:14:40,276 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:14:40,276 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:14:41,976 log 230 Not Found: /browse_histories/
+INFO 2021-03-10 07:14:41,978 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+WARNING 2021-03-10 07:14:41,979 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+WARNING 2021-03-10 07:20:09,300 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:20:09,301 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:21:46,137 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:21:46,138 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:23:03,257 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:23:03,258 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:25:07,218 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:25:07,218 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 07:25:37,482 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 07:25:43,586 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:25:43,587 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 07:26:51,048 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 07:27:00,150 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:27:00,151 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 07:29:49,713 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 07:29:49,866 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 07:29:49,866 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 07:34:46,177 log 230 Not Found: /carts/
+WARNING 2021-03-10 07:34:46,177 basehttp 157 "GET /carts/ HTTP/1.1" 404 3346
+WARNING 2021-03-10 07:34:49,226 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 07:34:49,227 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 07:34:49,228 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 08:40:04,417 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+WARNING 2021-03-10 08:40:04,419 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:40:04,419 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+INFO 2021-03-10 08:40:16,919 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 08:40:20,094 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:40:20,094 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+INFO 2021-03-10 08:40:30,776 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-10 08:40:36,892 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:40:36,892 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+WARNING 2021-03-10 08:40:43,093 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 08:40:43,093 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 08:40:58,984 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:40:58,984 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+WARNING 2021-03-10 08:41:27,444 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 08:41:27,444 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-10 08:41:42,722 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 08:41:42,869 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 08:41:42,869 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 08:43:50,960 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:43:50,960 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+WARNING 2021-03-10 08:44:08,038 log 230 Forbidden: /login/
+WARNING 2021-03-10 08:44:08,038 basehttp 157 "POST /login/ HTTP/1.1" 403 39
+WARNING 2021-03-10 08:44:21,659 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 08:44:21,660 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-10 08:45:22,152 log 230 Not Found: /browse_histories/
+WARNING 2021-03-10 08:45:22,152 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-10 08:45:22,154 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-10 08:46:56,513 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-10 08:46:56,670 log 230 Not Found: /carts/simple/
+WARNING 2021-03-10 08:46:56,670 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-11 00:55:45,956 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 00:59:39,746 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:00:15,020 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 14 (char 13)
+ERROR 2021-03-11 01:00:15,021 basehttp 157 "POST /login/ HTTP/1.1" 500 88239
+ERROR 2021-03-11 01:00:52,672 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 13 (char 12)
+ERROR 2021-03-11 01:00:52,673 basehttp 157 "POST /login/ HTTP/1.1" 500 88227
+INFO 2021-03-11 01:00:59,411 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:01:03,839 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 13 (char 12)
+ERROR 2021-03-11 01:01:03,842 basehttp 157 "POST /login/ HTTP/1.1" 500 88227
+INFO 2021-03-11 01:04:02,475 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:04:05,160 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 15 (char 14)
+ERROR 2021-03-11 01:04:05,162 basehttp 157 "POST /login/ HTTP/1.1" 500 88247
+INFO 2021-03-11 01:04:23,265 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:04:49,850 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-11 01:06:19,603 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:06:19,966 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:06:19,968 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:06:23,306 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:06:23,307 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+WARNING 2021-03-11 01:06:46,839 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:06:46,840 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:06:46,843 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:07:15,389 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:07:15,546 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:07:15,547 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-11 01:07:29,211 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:07:44,924 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:07:45,077 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:07:45,077 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:07:46,685 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:07:46,686 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:07:46,687 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:08:31,092 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:08:31,249 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:08:31,250 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:08:32,872 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:08:32,873 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:08:32,874 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+WARNING 2021-03-11 01:08:55,420 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:08:55,420 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:08:55,422 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:10:03,974 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:10:07,189 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 14 (char 13)
+ERROR 2021-03-11 01:10:07,192 basehttp 157 "POST /login/ HTTP/1.1" 500 86371
+INFO 2021-03-11 01:13:07,064 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:13:20,927 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:13:21,110 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:13:21,111 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:13:22,794 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:13:22,795 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:13:50,756 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:27:09,590 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:27:13,235 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 14 (char 13)
+ERROR 2021-03-11 01:27:13,236 basehttp 157 "POST /login/ HTTP/1.1" 500 86371
+INFO 2021-03-11 01:28:51,151 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 01:28:51,475 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:29:02,772 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 01:29:03,079 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:29:10,531 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:29:12,941 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode(), strict=False)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 361, in loads
+    return cls(**kw).decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 14 (char 13)
+ERROR 2021-03-11 01:29:12,943 basehttp 157 "POST /login/ HTTP/1.1" 500 85275
+INFO 2021-03-11 01:29:21,900 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 01:29:22,208 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-11 01:30:44,401 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py", line 110, in post
+    dict = json.loads(request.body.decode())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 13 (char 12)
+ERROR 2021-03-11 01:30:44,402 basehttp 157 "POST /login/ HTTP/1.1" 500 86351
+WARNING 2021-03-11 01:34:46,685 log 230 Forbidden: /login/
+WARNING 2021-03-11 01:34:46,685 basehttp 157 "POST /login/ HTTP/1.1" 403 18
+INFO 2021-03-11 01:34:50,159 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-11 01:34:53,440 log 230 Forbidden: /login/
+WARNING 2021-03-11 01:34:53,440 basehttp 157 "POST /login/ HTTP/1.1" 403 18
+INFO 2021-03-11 01:35:11,149 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-11 01:35:38,503 log 230 Forbidden: /login/
+WARNING 2021-03-11 01:35:38,507 basehttp 157 "POST /login/ HTTP/1.1" 403 18
+WARNING 2021-03-11 01:36:49,615 log 230 Forbidden: /login/
+WARNING 2021-03-11 01:36:49,618 basehttp 157 "POST /login/ HTTP/1.1" 403 18
+ERROR 2021-03-11 01:38:33,303 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view users.views.LoginView didn't return an HttpResponse object. It returned None instead.
+ERROR 2021-03-11 01:38:33,310 basehttp 157 "POST /login/ HTTP/1.1" 500 66857
+ERROR 2021-03-11 01:39:17,237 log 230 Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view users.views.LoginView didn't return an HttpResponse object. It returned None instead.
+ERROR 2021-03-11 01:39:17,242 basehttp 157 "POST /login/ HTTP/1.1" 500 66857
+INFO 2021-03-11 01:42:20,343 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 01:42:21,372 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:42:41,412 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:43:02,437 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+INFO 2021-03-11 01:43:27,206 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:43:43,771 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+INFO 2021-03-11 01:44:10,346 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:44:16,497 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-11 01:44:36,605 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:44:36,606 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+INFO 2021-03-11 01:44:48,979 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:44:49,135 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:44:49,136 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:44:51,123 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:44:51,124 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:44:51,125 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:45:57,077 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 01:45:57,234 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 01:45:57,234 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3367
+WARNING 2021-03-11 01:45:59,249 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 01:45:59,250 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3379
+INFO 2021-03-11 01:45:59,252 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:46:31,134 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:47:08,167 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 01:48:47,495 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 01:59:02,713 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/settings/dev.py changed, reloading.
+INFO 2021-03-11 01:59:03,060 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:14:59,616 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/models.py changed, reloading.
+INFO 2021-03-11 02:15:00,087 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:37:34,399 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 02:37:34,878 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:37:55,318 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 02:37:55,640 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:38:59,593 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 02:38:59,925 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:40:55,302 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:41:38,295 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:42:40,164 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 02:42:40,493 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:43:00,658 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:43:47,396 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:46:41,333 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:47:07,369 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:47:20,646 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:47:57,299 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:49:04,938 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:51:22,265 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:55:53,900 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/__init__.py changed, reloading.
+INFO 2021-03-11 02:55:54,253 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:56:51,131 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 02:58:55,905 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/models.py changed, reloading.
+INFO 2021-03-11 02:58:56,205 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 03:01:09,061 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 03:01:09,397 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 03:07:40,148 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:02:01,760 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:02:55,096 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:04:54,722 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:04:55,016 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:09:30,488 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:09:30,816 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:09:59,264 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:09:59,554 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:18:47,983 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:18:48,309 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:18:54,347 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:20:39,832 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:20:40,143 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:20:51,608 basehttp 157 "GET /areas/ HTTP/1.1" 200 63
+INFO 2021-03-11 05:24:07,911 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:24:56,755 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:25:00,334 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-11 05:25:54,739 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:25:55,059 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:27:46,616 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:27:47,019 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:33:18,520 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:33:21,374 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-11 05:43:11,332 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:43:11,810 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:43:50,431 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:43:50,877 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:48:30,364 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:48:30,835 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:50:03,186 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:50:03,626 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:54:23,064 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:54:23,511 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 05:57:48,342 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 05:57:48,827 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-11 05:58:28,392 log 230 Not Found: /areas/110000/
+WARNING 2021-03-11 05:58:28,393 basehttp 157 "GET /areas/110000/ HTTP/1.1" 404 3700
+WARNING 2021-03-11 05:58:36,930 log 230 Not Found: /areas/1/
+WARNING 2021-03-11 05:58:36,930 basehttp 157 "GET /areas/1/ HTTP/1.1" 404 3685
+WARNING 2021-03-11 06:01:46,615 log 230 Not Found: /areas/110100/
+WARNING 2021-03-11 06:01:46,615 basehttp 157 "GET /areas/110100/ HTTP/1.1" 404 3700
+INFO 2021-03-11 06:02:13,731 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-03-11 06:02:17,569 log 230 Not Found: /areas/110100/
+WARNING 2021-03-11 06:02:17,570 basehttp 157 "GET /areas/110100/ HTTP/1.1" 404 3700
+INFO 2021-03-11 06:02:54,189 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/urls.py changed, reloading.
+INFO 2021-03-11 06:02:54,926 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:03:31,464 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:03:38,225 basehttp 157 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2021-03-11 06:19:15,292 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py changed, reloading.
+INFO 2021-03-11 06:19:15,777 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:25:19,795 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:25:22,800 basehttp 157 "GET /areas/110100/ HTTP/1.1" 200 843
+INFO 2021-03-11 06:33:37,579 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:33:54,665 basehttp 157 "OPTIONS /login/ HTTP/1.1" 200 0
+INFO 2021-03-11 06:33:54,772 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 06:34:13,568 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 06:34:13,568 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3700
+WARNING 2021-03-11 06:34:17,396 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 06:34:17,397 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3712
+INFO 2021-03-11 06:34:17,399 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+INFO 2021-03-11 06:34:30,398 basehttp 157 "POST /login/ HTTP/1.1" 200 27
+WARNING 2021-03-11 06:34:30,552 log 230 Not Found: /carts/simple/
+WARNING 2021-03-11 06:34:30,552 basehttp 157 "GET /carts/simple/ HTTP/1.1" 404 3700
+WARNING 2021-03-11 06:34:33,792 log 230 Not Found: /browse_histories/
+WARNING 2021-03-11 06:34:33,792 basehttp 157 "GET /browse_histories/ HTTP/1.1" 404 3712
+INFO 2021-03-11 06:34:33,794 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+WARNING 2021-03-11 06:34:41,217 log 230 Not Found: /addresses/
+WARNING 2021-03-11 06:34:41,217 basehttp 157 "GET /addresses/ HTTP/1.1" 404 3691
+INFO 2021-03-11 06:34:41,221 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-11 06:34:50,577 basehttp 157 "GET /areas/130000/ HTTP/1.1" 200 701
+INFO 2021-03-11 06:35:24,325 basehttp 157 "GET /areas/110000/ HTTP/1.1" 200 141
+INFO 2021-03-11 06:35:48,963 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:35:56,318 basehttp 157 "GET /areas/130000/ HTTP/1.1" 200 701
+INFO 2021-03-11 06:36:24,227 basehttp 157 "GET /info/ HTTP/1.1" 200 125
+WARNING 2021-03-11 06:36:24,237 log 230 Not Found: /browse_histories/
+INFO 2021-03-11 06:36:31,023 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+WARNING 2021-03-11 06:36:31,027 log 230 Not Found: /addresses/
+WARNING 2021-03-11 06:36:31,028 basehttp 157 "GET /addresses/ HTTP/1.1" 404 3691
+INFO 2021-03-11 06:36:37,918 basehttp 157 "GET /areas/130000/ HTTP/1.1" 200 701
+INFO 2021-03-11 06:36:53,839 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 06:37:08,903 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-11 06:37:26,331 basehttp 157 "GET /areas/120000/ HTTP/1.1" 200 141
+INFO 2021-03-11 06:39:07,096 basehttp 157 "GET /areas/130100/ HTTP/1.1" 200 1067
+INFO 2021-03-11 06:39:27,632 basehttp 157 "GET /areas/130000/ HTTP/1.1" 200 701
+INFO 2021-03-11 06:50:23,810 basehttp 157 "GET /areas/140000/ HTTP/1.1" 200 601
+INFO 2021-03-11 07:28:16,150 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/models.py changed, reloading.
+INFO 2021-03-11 07:28:16,639 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:28:49,207 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/models.py changed, reloading.
+INFO 2021-03-11 07:28:49,496 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:29:37,209 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:30:25,869 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/models.py changed, reloading.
+INFO 2021-03-11 07:30:26,175 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:31:32,025 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/models.py changed, reloading.
+INFO 2021-03-11 07:31:32,317 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:34:47,335 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:42:02,004 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-11 07:42:02,382 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:49:50,518 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 07:49:51,016 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:50:45,792 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 07:50:46,210 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:51:23,763 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 07:51:24,074 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 07:51:42,496 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 07:51:42,901 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 08:03:52,431 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 08:03:52,892 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-11 08:16:02,729 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-03-11 08:16:03,209 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-12 01:24:39,441 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-12 01:24:39,896 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-12 05:50:26,321 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/urls.py changed, reloading.
+INFO 2021-03-12 05:50:26,833 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 01:59:58,512 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 02:00:07,638 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-17 02:04:50,721 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-17 02:05:00,680 log 230 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py", line 49, in get
+    'province_list': paginator})
+UnboundLocalError: local variable 'paginator' referenced before assignment
+ERROR 2021-03-17 02:05:00,681 basehttp 157 "GET /areas/ HTTP/1.1" 500 76299
+INFO 2021-03-17 02:05:09,370 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 02:20:02,885 autoreload 612 Watching for file changes with StatReloader
+ERROR 2021-03-17 02:20:09,938 log 230 Internal Server Error: /areas/
+Traceback (most recent call last):
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 73, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/Users/dapeng/.virtualenvs/meiduo/lib/python3.7/site-packages/django/views/generic/base.py", line 101, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/areas/views.py", line 50, in get
+    'province_list': paginator})
+UnboundLocalError: local variable 'paginator' referenced before assignment
+ERROR 2021-03-17 02:20:09,938 basehttp 157 "GET /areas/ HTTP/1.1" 500 76299
+INFO 2021-03-17 02:34:37,499 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 02:35:24,058 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 02:35:27,049 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-03-17 05:22:41,299 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-03-17 05:22:47,993 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-04-20 01:13:36,967 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-20 01:13:41,798 basehttp 157 "GET /areas/ HTTP/1.1" 200 1772
+INFO 2021-04-23 02:10:12,320 autoreload 612 Watching for file changes with StatReloader
+WARNING 2021-04-23 02:10:16,422 log 230 Not Found: /
+WARNING 2021-04-23 02:10:16,422 basehttp 157 "GET / HTTP/1.1" 404 3963
+WARNING 2021-04-23 02:10:16,505 log 230 Not Found: /favicon.ico
+WARNING 2021-04-23 02:10:16,505 basehttp 157 "GET /favicon.ico HTTP/1.1" 404 4014
+INFO 2021-04-23 02:13:13,492 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/settings/dev.py changed, reloading.
+INFO 2021-04-23 02:13:13,974 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 02:19:17,028 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 02:19:17,508 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 02:44:38,110 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 02:44:38,731 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 02:52:33,509 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 02:52:33,941 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 02:55:01,120 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 02:55:01,525 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 03:06:05,792 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 03:06:06,312 autoreload 612 Watching for file changes with StatReloader
+INFO 2021-04-23 03:28:51,159 autoreload 236 /Users/dapeng/Documents/Python/shopping-mall_demo/mall_project/mall_project/apps/users/views.py changed, reloading.
+INFO 2021-04-23 03:28:51,640 autoreload 612 Watching for file changes with StatReloader
