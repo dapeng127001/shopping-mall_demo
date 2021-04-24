@@ -193,6 +193,9 @@ class UserInfoView(LoginRequiredMixin, View):
                                   'info_date': info_date})
 
 
+
+
+
 class CreateAddressView(View):
     """新增收货地址"""
     def post(self, request):
