@@ -226,8 +226,15 @@ CORS_ORIGIN_WHITELIST = (
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
 
 # 指定自定义的用户认证后端:
-AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend']     ####我是冲突吗？#####
+
 
 
 
 ###我是冲突吗？####
+AUTHENTICATION_BACKENDS = ['users.utils.UsernameMobileAuthBackend']
+
+# 这是测试
+#TEST = test
+
+
+# 今天整理了面试笔记，并把项目进行梳理完整
